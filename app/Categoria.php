@@ -15,4 +15,12 @@ class Categoria extends Model
     protected $fillable = [
         'nombre_categoria',
     ];
+
+    public function productos(){
+    	return $this->hasMany(Producto::class,'fk_id_categoria');
+    }
+
+    public function scopeEstado($query,$estado){
+    	return $query->where('estado_categoria',$estado);
+    }
 }

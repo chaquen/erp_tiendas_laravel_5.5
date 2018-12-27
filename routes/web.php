@@ -11,14 +11,27 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-    //dd(config());
-});
+
 Route::get('/config', function () {
     dd(config());
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::post("subir_archivo","ProductoController@subir_archivo");
+Route::group([
+    // 'prefix' => 'admin',
+    'namespace' => 'Admin',
+    'middleware' => 'auth',
+], function(){
+
+	Route::get('/home', 'HomeController@index')->name('home');
+	Route::post("subir_archivo","ProductoController@subir_archivo");
+
+	Route::resource('/productos', 'ProductoController');
+	Route::resource('/categorias', 'CategoriaController');
+	Route::resource('/sedes', 'SedeController');
+	Route::get('/', function () {
+	
+	    return view('home');
+	    //dd(config());
+	});
+});

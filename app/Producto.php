@@ -27,4 +27,14 @@ class Producto extends Model
         				'maximo_inventario',
         				'fk_id_categoria',
     ];
+
+    public function categoria(){
+        return $this->belongsTo(Categoria::class,'fk_id_categoria');
+    }
+    public function inventario(){
+        return $this->hasMany(DetalleInventario::class,'fk_id_producto');
+    }
+    public function scopeEstado($query,$estado){
+        return $query->where('estado_producto',$estado);
+    }
 }

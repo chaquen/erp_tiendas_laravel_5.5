@@ -20,4 +20,8 @@ class Sede extends Model
                 'fk_id_administrador',
 
     ];
+
+    public function inventario_sede(){
+        return $this->belongsToMany(DetalleInventario::class,'fk_id_sede');
+    }
 }
