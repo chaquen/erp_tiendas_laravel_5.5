@@ -6,7 +6,7 @@ $factory->define(App\DetalleInventario::class, function (Faker $faker) {
     return [
         //
        'fk_id_producto'=>rand(1,500),
-	   'fk_id_sede'=>rand(2,6),
+	   'fk_id_sede'=>rand(1,4),
 	   'fecha_caducidad'=>$faker->date,
 	   'cantidad_existencias'=>rand(1,50),
 	   'cantidad_devueltas'=>rand(1,50),

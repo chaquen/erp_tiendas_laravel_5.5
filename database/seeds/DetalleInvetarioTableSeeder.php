@@ -12,6 +12,6 @@ class DetalleInvetarioTableSeeder extends Seeder
     public function run()
     {
         //
-        factory(App\DetalleInventario::class,100)->create();
+        factory(App\DetalleInventario::class,5000)->create();
     }
 }

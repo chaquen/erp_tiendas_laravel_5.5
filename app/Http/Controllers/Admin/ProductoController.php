@@ -14,34 +14,37 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+
+    }
+    /*{
+        //AQUI UNA PRUEBA DE Eloquent Y LAS RELACIONES ENTRE TABLAS
         $p=Producto::orderBy('fk_id_categoria',"ASC")->get();
         //dd($p[0]->categoria);
         foreach ($p as $key => $value) {
-            /*dd([$value,
+            dd([$value,
                 $value->categoria,
                 $value->categoria()->estado('0')->get(),
                 $value->inventario,
-                $value->inventario[0]->mi_sede()->where('id',1)->get()]);*/
-                
+                $value->inventario[0]->mi_sede()->where('id',1)->get()]);
+
 
                 if($value->inventario!=null){
-                
+
                     foreach ($value->inventario as $k => $v) {
                         echo $value->nombre_producto." => ";
                         echo $value->categoria->nombre_categoria." => ";
-                        
+
                         echo $v->cantidad_existencias."<br>";   ;
                     }
 
                 }else{
                     echo $value->nombre_producto." => ";
                     echo $value->categoria->nombre_categoria." => ";
-                    echo "0<br>";   ;    
+                    echo "0<br>";   ;
                 }
-                
+
         }
-    }   
+    } */
 
     /**
      * Show the form for creating a new resource.
