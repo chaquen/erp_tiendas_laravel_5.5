@@ -15,6 +15,23 @@
 Route::get('/config', function () {
     dd(config());
 });
+Route::get('/fecha', function () {
+
+    //Jenssegers\Date\Date::setLocale('es');
+    echo ">>Carbon"."<br>";;
+    $fecha=new Carbon\Carbon();
+    echo $fecha."<br>";
+    echo $fecha->format('l jS \\of F Y h:i:s A')."<br>";;
+    echo ">>Jenssegers\Date\Date en español"."<br>";;
+    $fecha2=new Jenssegers\Date\Date;
+    echo $fecha2."<br>";
+    echo $fecha2->format('l jS \\of F Y h:i:s A')."<br>";
+    echo $fecha2->format('l d F Y')."<br>";
+
+
+  //echo Date::now()->format('l j F Y H:i:s');
+    //echo $fecha2->format('l jS \\of F Y h:i:s A');
+});
 Auth::routes();
 
 Route::group([
@@ -30,7 +47,7 @@ Route::group([
 	Route::resource('/categorias', 'CategoriaController');
 	Route::resource('/sedes', 'SedeController');
 	Route::get('/', function () {
-	
+
 	    return view('home');
 	    //dd(config());
 	});
