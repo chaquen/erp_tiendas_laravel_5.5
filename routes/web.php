@@ -41,11 +41,12 @@ Route::group([
 ], function(){
 
 	Route::get('/home', 'HomeController@index')->name('home');
-	Route::post("subir_archivo","ProductoController@subir_archivo");
+	Route::post("/subir_archivo","ProductoController@subir_archivo");
 
 	Route::resource('/productos', 'ProductoController');
 	Route::resource('/categorias', 'CategoriaController');
 	Route::resource('/sedes', 'SedeController');
+  Route::get('/importar','ProductoController@get_view_import')->name('productos.importar');
 	Route::get('/', function () {
 
 	    return view('home');

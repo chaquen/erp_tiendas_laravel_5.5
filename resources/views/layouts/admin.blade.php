@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>{{config('app.name')}}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="{{asset('adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
@@ -32,6 +32,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+          <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+                                      <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -60,7 +66,7 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="{{config('app.url')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>{{config('app.name')}}</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -71,7 +77,7 @@ desired effect
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Toggle navigation</span>
       </a>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
@@ -215,7 +221,7 @@ desired effect
                		<form action="{{route('logout')}}" method="POST">
                			{{csrf_field()}}
                   	<button type="submit" class="btn btn-default btn-flat">Salir</button>
-                  </form> 	
+                  </form>
                 </div>
               </li>
             </ul>
@@ -285,7 +291,7 @@ desired effect
       <!--------------------------
         | Your Page Content Here |
         -------------------------->
-       @yield('contenido_principal') 
+       @yield('contenido_principal')
     </section>
     <!-- /.content -->
   </div>
@@ -295,7 +301,7 @@ desired effect
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Anything you want
+      Version 1.1
     </div>
     <!-- Default to the left -->
     <strong>Copyright &copy; 2016 <a href="https://mohansoft.com">Mohansoft.com</a>.</strong> Todos los derechos reservados
@@ -392,5 +398,8 @@ desired effect
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
+
+@include('partials.scripts')
+
 </body>
 </html>

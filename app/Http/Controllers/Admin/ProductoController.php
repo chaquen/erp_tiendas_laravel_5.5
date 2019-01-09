@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Producto;
 use App\DetalleInventario;
+use App\Sede;
 class ProductoController extends Controller
 {
     /**
@@ -112,6 +113,11 @@ class ProductoController extends Controller
         //
     }
 
+    public function get_view_import(){
+      $sede=Sede::all();
+
+      return view('productos.import_view')->with("sedes",$sede);
+    }
     public function subir_archivo(Request $request){
         /*$this->validate(request(),[
             'file'=>'required|max:10240|mimetypes:application/csv,application/excel,

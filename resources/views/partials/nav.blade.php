@@ -17,15 +17,10 @@
     <ul class="treeview-menu">
       <li><a href="#">Buscar</a></li>
       <li><a href="#">Crear</a></li>
+      <li><a href="{{route('productos.importar')}}">Importar</a></li>
       <li><a href="#">Editar</a></li>
       <li><a href="#">Eliminar</a></li>
     </ul>
   </li>
-  <!--<li>
-    <form method="POST" action="{{route('logout')}}">
-      {{csrf_field()}}
 
-      <button class="btn btn-secondary btn-sm" style="background-color: #b8c7ce" type="submit" ><i class="fa fa-gears"></i>SALIR</button>
-    </form>
-  </li>-->
 </ul>
