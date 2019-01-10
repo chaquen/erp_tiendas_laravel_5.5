@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 use App\Producto;
 use App\DetalleInventario;
 use App\Sede;
+use  Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\ProductoImport;
+
+
+
+
 class ProductoController extends Controller
 {
     /**
@@ -127,6 +134,11 @@ class ProductoController extends Controller
                         inode/x-empty,
                         application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
         ]);*/
-        dd($request->file('file'));
+        //$url=Storage::url($request->file('file')->store('public'));
+        //dd($request->file('file'));
+        $url=$request->file('file');
+        //dd($url);
+        //dd(explode("/",$url));
+        Excel::import(new ProductoImport, $url);
     }
 }
