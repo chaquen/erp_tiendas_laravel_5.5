@@ -34,6 +34,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
+    <h3 class="login-box-msg">{{config('app.name')}}</h3>
     <p class="login-box-msg">Ingresa tus datos de acceso</p>
 
     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
