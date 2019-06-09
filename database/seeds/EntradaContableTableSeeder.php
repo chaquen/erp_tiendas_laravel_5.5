@@ -12,6 +12,7 @@ class EntradaContableTableSeeder extends Seeder
     public function run()
     {
         //
+        App\EntradaContable::truncate();
         factory(App\EntradaContable::class,20)->create();
     }
 }

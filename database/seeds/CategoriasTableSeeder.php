@@ -11,7 +11,7 @@ class CategoriasTableSeeder extends Seeder
      */
     public function run()
     {
-        
+        App\Categoria::truncate();
         factory(App\Categoria::class, 50)->create();
     }
 }

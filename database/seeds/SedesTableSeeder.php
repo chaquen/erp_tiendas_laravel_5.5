@@ -11,7 +11,7 @@ class SedesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        App\Sede::truncate();
         factory(App\Sede::class,5)->create();	
     }
 }

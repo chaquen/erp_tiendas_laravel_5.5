@@ -11,7 +11,7 @@ class SalidaContableTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        App\SalidaContable::truncate();
         factory(App\SalidaContable::class,10)->create();
     }
 }

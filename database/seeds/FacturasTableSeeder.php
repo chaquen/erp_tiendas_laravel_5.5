@@ -12,6 +12,7 @@ class FacturasTableSeeder extends Seeder
     public function run()
     {
         //
+        App\Factura::truncate();
         factory(App\Factura::class,5)->create();
     }
 }
