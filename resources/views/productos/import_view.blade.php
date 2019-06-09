@@ -19,10 +19,17 @@
     <div class="form-group">
       <label for="">Tipo de importación</label>
       <select class="form-control select2" id="selTipoImportacion">
-        <option value="Crear productos">Crear productos</option>
-        <option value="Editar productos">Editar productos</option>
-        <option value="Ajustar inventario">Ajustar inventario productos</option>
+        <option value="0" selected>Selecciona una opción</option>
+        <option value="1">Crear productos</option>
+        <option value="2">Editar productos</option>
+        <option value="3">Ajustar inventario productos</option>
       </select>
+    </div>
+    <!--Div para mostrar las plantillas de los archivos-->
+    <div class="form-group">
+      <a style="display: none" id="anc_crear" href="{{asset('archivos/plantilla_crear_archivos.xlsx')}}" target="_blank">link 1</a>
+      <a style="display: none" id="anc_ajustar" href="{{asset('archivos/plantilla_editar_archivos.xlsx')}}" target="_blank">link 2</a>
+      <a style="display: none" id="anc_editar" href="{{asset('archivos/plantilla_ajustar_archivos.xlsx')}}" target="_blank">link 3</a>
     </div>
     <div class="form-group">
       <div class="dropzone"></div>
@@ -35,7 +42,38 @@
 
 <!--DEBE IR AL FINAL-->
 <script type="text/javascript">
+    window.onload=function(){
+      //$('#selTipoImportacion').select2();
 
+      document.getElementById("selTipoImportacion").addEventListener("change",function(){
+        
+        switch(this.value){
+          case "0":
+              document.getElementById('anc_crear').style.display="none";
+              document.getElementById('anc_ajustar').style.display="none";
+              document.getElementById('anc_editar').style.display="none"; 
+            break;
+          case "1":
+              document.getElementById('anc_crear').style.display="";
+              document.getElementById('anc_ajustar').style.display="none";
+              document.getElementById('anc_editar').style.display="none";
+              
+            break;
+          case "2":
+              document.getElementById('anc_crear').style.display="none";
+              document.getElementById('anc_ajustar').style.display="";
+              document.getElementById('anc_editar').style.display="none";
+            break;
+          case "3":
+              document.getElementById('anc_crear').style.display="none";
+              document.getElementById('anc_ajustar').style.display="none";
+              document.getElementById('anc_editar').style.display="";
+            break;    
+        }
+
+      });
+    }
+    
     var dz=new Dropzone('.dropzone',{
         //url:"/",
         url:"{{config('app.url')}}"+"/subir_archivo",
