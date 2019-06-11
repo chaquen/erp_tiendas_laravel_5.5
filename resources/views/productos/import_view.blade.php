@@ -23,13 +23,15 @@
         <option value="1">Crear productos</option>
         <option value="2">Editar productos</option>
         <option value="3">Ajustar inventario productos</option>
+        <option value="4">Insertar inventario productos sede</option>
       </select>
     </div>
     <!--Div para mostrar las plantillas de los archivos-->
     <div class="form-group">
-      <a style="display: none" id="anc_crear" href="{{asset('archivos/plantilla_crear_archivos.xlsx')}}" target="_blank">link 1</a>
-      <a style="display: none" id="anc_ajustar" href="{{asset('archivos/plantilla_editar_archivos.xlsx')}}" target="_blank">link 2</a>
-      <a style="display: none" id="anc_editar" href="{{asset('archivos/plantilla_ajustar_archivos.xlsx')}}" target="_blank">link 3</a>
+      <a style="display: none" id="anc_crear" href="{{asset('archivos/importar/plantilla_crear_archivos.rar')}}" target="_blank">Descargar</a>
+      <a style="display: none" id="anc_ajustar" href="{{asset('archivos/importar/plantilla_editar_archivos.rar')}}" target="_blank">Descargar</a>
+      <a style="display: none" id="anc_editar" href="{{asset('archivos/importar/plantilla_ajustar_archivos.rar')}}" target="_blank">Descargar</a>
+       <a style="display: none" id="anc_inventario" href="{{asset('archivos/importar/inventario_sede.rar')}}" target="_blank">Descargar</a>
     </div>
     <div class="form-group">
       <div class="dropzone"></div>
@@ -52,23 +54,30 @@
               document.getElementById('anc_crear').style.display="none";
               document.getElementById('anc_ajustar').style.display="none";
               document.getElementById('anc_editar').style.display="none"; 
+              document.getElementById('anc_inventario').style.display="none"; 
+
             break;
           case "1":
               document.getElementById('anc_crear').style.display="";
               document.getElementById('anc_ajustar').style.display="none";
               document.getElementById('anc_editar').style.display="none";
+              document.getElementById('anc_inventario').style.display="none"; 
               
             break;
           case "2":
               document.getElementById('anc_crear').style.display="none";
               document.getElementById('anc_ajustar').style.display="";
               document.getElementById('anc_editar').style.display="none";
-            break;
+              document.getElementById('anc_inventario').style.display="none";
+
+            break;    
           case "3":
               document.getElementById('anc_crear').style.display="none";
               document.getElementById('anc_ajustar').style.display="none";
               document.getElementById('anc_editar').style.display="";
-            break;    
+              document.getElementById('anc_inventario').style.display="none";
+
+            break;      
         }
 
       });
