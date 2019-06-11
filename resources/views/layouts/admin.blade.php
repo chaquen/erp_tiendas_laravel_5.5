@@ -56,22 +56,22 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini ">
 <div class="wrapper">
 
   <!-- Main Header -->
-  <header class="main-header">
+  <header class="main-header ">
 
     <!-- Logo -->
-    <a href="{{config('app.url')}}" class="logo">
+    <a href="{{config('app.url')}}" class="logo bg-black">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>{{config('app.name')}}</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>{{config('app.name')}}</b></span>
+      <span class="logo-lg "><b>{{config('app.name')}}</b></span>
     </a>
 
     <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top" role="navigation">
+    <nav class="navbar navbar-static-top bg-black" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
           <span class="sr-only">Toggle navigation</span>
@@ -95,7 +95,7 @@ desired effect
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
-                        <img src="{{asset('adminlte/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                        <img src="{{asset('adminlte/dist/img/')}}" class="img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
@@ -232,10 +232,10 @@ desired effect
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
+  <aside class="main-sidebar bg-blue">
 
     <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
+    <section class="sidebar bg-blue">
 
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
@@ -269,10 +269,10 @@ desired effect
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper bg-white">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
+      <h1 class="text-aqua">
         {{config('app.name')}}
         <small></small>
       </h1>
@@ -283,7 +283,7 @@ desired effect
     </section>
 
     <!-- Main content -->
-    <section class="content container-fluid">
+    <section class="content container-fluid ">
 
       <!--------------------------
         | Your Page Content Here |

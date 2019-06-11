@@ -9,7 +9,7 @@
 
   </li>
   <li class="treeview">
-    <a href="#"><i class="fa fa-link"></i> <span>Productos</span>
+    <a href="#"><i class="fa fa-link"></i> <span><b>Productos</b></span>
       <span class="pull-right-container">
           <i class="fa fa-angle-left pull-right"></i>
         </span>

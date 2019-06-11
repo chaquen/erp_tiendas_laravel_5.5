@@ -37,7 +37,7 @@
       <div class="dropzone"></div>
     </div>
     <div form="form-group">
-      <button type="submit" class="btn btn-primary">Importar</button>
+      <button type="submit" class="btn btn-success">Importar</button>
     </div>
   </form>
 </div>
