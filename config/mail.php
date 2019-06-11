@@ -56,8 +56,10 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS',config('mail.username')),
-        'name' => env('MAIL_FROM_NAME', config('app.name')),
+        //'address' => env('MAIL_FROM_ADDRESS',config('mail.username')),
+        //'name' => env('MAIL_FROM_NAME', config('app.name')),
+        'address' => env('MAIL_FROM_ADDRESS','notificacion@ejemplo.com'),
+        'name' => env('MAIL_FROM_NAME', 'no responder'),
     ],
 
     /*
