@@ -15,11 +15,11 @@
         </span>
     </a>
     <ul class="treeview-menu">
-      <li><a href="#">Buscar</a></li>
-      <li><a href="#">Crear</a></li>
-      <li><a href="{{route('productos.importar')}}">Importar</a></li>
-      <li><a href="#">Editar</a></li>
-      <li><a href="#">Eliminar</a></li>
+      <li><a href="#"><i class="fa fa-search-plus"></i>Buscar</a></li>
+      <li><a href="#"><i class="fa fa-plus"></i>Crear</a></li>
+      <li><a href="{{route('productos.importar')}}"><i class="fa fa-cloud-upload"> Importar</a></i></li>
+      <li><a href="#"><i class="fa fa-wrench"></i>Editar</a></li>
+      <li><a href="#"><i class="fa fa-trash"></i>Eliminar</a></li>
     </ul>
   </li>
 

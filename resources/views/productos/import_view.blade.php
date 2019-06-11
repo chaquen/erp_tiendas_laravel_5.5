@@ -74,8 +74,8 @@
           case "3":
               document.getElementById('anc_crear').style.display="none";
               document.getElementById('anc_ajustar').style.display="none";
-              document.getElementById('anc_editar').style.display="";
-              document.getElementById('anc_inventario').style.display="none";
+              document.getElementById('anc_editar').style.display="none";
+              document.getElementById('anc_inventario').style.display="";
 
             break;      
         }
